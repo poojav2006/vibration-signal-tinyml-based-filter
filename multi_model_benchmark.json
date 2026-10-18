@@ -1,0 +1,654 @@
+{
+  "decision_tree": {
+    "key": "decision_tree",
+    "name": "Decision Tree (CART)",
+    "category": "Tree-based / Symbolic",
+    "train_acc": 88.1,
+    "val_acc": 62.5,
+    "test_acc": 92.22,
+    "macro_f1": 92.26,
+    "weighted_f1": 92.26,
+    "latency_us": 64.8,
+    "file_size_kb": 7.6,
+    "tinyml_score": 98,
+    "embedded_status": "Excellent (Native C++ Header, 0 Bytes Malloc)",
+    "hardware_target": "ESP32 / ARM Cortex-M0+/M4 (Direct Form)",
+    "description": "Direct if-else decision rules with minimal ROM/RAM footprint and deterministic execution time.",
+    "confusion_matrix": [
+      [
+        85,
+        1,
+        3,
+        1
+      ],
+      [
+        4,
+        82,
+        3,
+        1
+      ],
+      [
+        5,
+        2,
+        82,
+        1
+      ],
+      [
+        4,
+        1,
+        2,
+        83
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 0.8673469387755102,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9042553191489362,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9534883720930233,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9318181818181818,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.9111111111111111,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9111111111111111,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 0.9651162790697675,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9431818181818182,
+        "support": 90.0
+      },
+      "accuracy": 0.9222222222222223,
+      "macro avg": {
+        "precision": 0.9242656752623529,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9225916075650118,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.924265675262353,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9225916075650119,
+        "support": 360.0
+      }
+    },
+    "model_file": "decision_tree.joblib"
+  },
+  "random_forest": {
+    "key": "random_forest",
+    "name": "Random Forest",
+    "category": "Ensemble (Bagging)",
+    "train_acc": 91.05,
+    "val_acc": 62.14,
+    "test_acc": 93.06,
+    "macro_f1": 93.08,
+    "weighted_f1": 93.08,
+    "latency_us": 17233.2,
+    "file_size_kb": 474.8,
+    "tinyml_score": 74,
+    "embedded_status": "Moderate (Requires ~120 KB Flash for 50 trees)",
+    "hardware_target": "ESP32-S3 / ARM Cortex-M7 / Raspberry Pi",
+    "description": "Ensemble of 50 decision trees voting in parallel. Reduces variance and boosts generalization.",
+    "confusion_matrix": [
+      [
+        83,
+        1,
+        5,
+        1
+      ],
+      [
+        3,
+        83,
+        3,
+        1
+      ],
+      [
+        3,
+        2,
+        84,
+        1
+      ],
+      [
+        1,
+        1,
+        3,
+        85
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 0.9222222222222223,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9222222222222223,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9540229885057471,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9378531073446328,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.8842105263157894,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9081081081081082,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 0.9659090909090909,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9550561797752809,
+        "support": 90.0
+      },
+      "accuracy": 0.9305555555555556,
+      "macro avg": {
+        "precision": 0.9315912069882124,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.9308099043625611,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.9315912069882125,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.9308099043625611,
+        "support": 360.0
+      }
+    },
+    "model_file": "random_forest.joblib"
+  },
+  "gradient_boosting": {
+    "key": "gradient_boosting",
+    "name": "Gradient Boosting (GBDT)",
+    "category": "Ensemble (Boosting)",
+    "train_acc": 92.1,
+    "val_acc": 62.14,
+    "test_acc": 93.06,
+    "macro_f1": 93.09,
+    "weighted_f1": 93.09,
+    "latency_us": 643.3,
+    "file_size_kb": 255.5,
+    "tinyml_score": 78,
+    "embedded_status": "Good (Sequential shallow trees, ~45 KB Flash)",
+    "hardware_target": "ESP32 / Edge Microcontrollers",
+    "description": "Sequential tree boosting correcting residual errors iteratively. High tabular accuracy.",
+    "confusion_matrix": [
+      [
+        83,
+        4,
+        3,
+        0
+      ],
+      [
+        3,
+        82,
+        5,
+        0
+      ],
+      [
+        3,
+        1,
+        86,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        84
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 0.9222222222222223,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9222222222222223,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9213483146067416,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9162011173184358,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.8865979381443299,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.9197860962566845,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9655172413793104,
+        "support": 90.0
+      },
+      "accuracy": 0.9305555555555556,
+      "macro avg": {
+        "precision": 0.9325421187433234,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.9309316692941633,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.9325421187433234,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.9309316692941633,
+        "support": 360.0
+      }
+    },
+    "model_file": "gradient_boosting.joblib"
+  },
+  "svm": {
+    "key": "svm",
+    "name": "Support Vector Machine (SVM - RBF)",
+    "category": "Kernel Machine",
+    "train_acc": 86.38,
+    "val_acc": 61.43,
+    "test_acc": 92.78,
+    "macro_f1": 92.8,
+    "weighted_f1": 92.8,
+    "latency_us": 267.4,
+    "file_size_kb": 52.7,
+    "tinyml_score": 62,
+    "embedded_status": "Moderate (Support vectors require SRAM storage)",
+    "hardware_target": "ARM Cortex-M4F / Edge Gateway",
+    "description": "Max-margin hyperplane in infinite-dimensional RBF space. Highly robust decision boundaries.",
+    "confusion_matrix": [
+      [
+        82,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        82,
+        4,
+        3
+      ],
+      [
+        1,
+        2,
+        85,
+        2
+      ],
+      [
+        0,
+        1,
+        4,
+        85
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 0.9761904761904762,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9425287356321839,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9425287356321839,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9265536723163842,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.8854166666666666,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9139784946236559,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 0.9139784946236559,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9289617486338798,
+        "support": 90.0
+      },
+      "accuracy": 0.9277777777777778,
+      "macro avg": {
+        "precision": 0.9295285932782457,
+        "recall": 0.9277777777777778,
+        "f1-score": 0.928005662801526,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.9295285932782457,
+        "recall": 0.9277777777777778,
+        "f1-score": 0.928005662801526,
+        "support": 360.0
+      }
+    },
+    "model_file": "svm.joblib"
+  },
+  "mlp_neural_net": {
+    "key": "mlp_neural_net",
+    "name": "Tiny Neural Network (MLP)",
+    "category": "Deep Learning / Connectionist",
+    "train_acc": 85.52,
+    "val_acc": 63.93,
+    "test_acc": 92.5,
+    "macro_f1": 92.67,
+    "weighted_f1": 92.67,
+    "latency_us": 465.6,
+    "file_size_kb": 12.9,
+    "tinyml_score": 92,
+    "embedded_status": "Excellent (Easily mapped to CMSIS-NN / TFLite Micro)",
+    "hardware_target": "ESP32 / STM32 (CMSIS-NN int8 quantized)",
+    "description": "Feedforward neural network: 5 inputs -> 16 Dense (ReLU) -> 8 Dense (ReLU) -> 4 Softmax.",
+    "confusion_matrix": [
+      [
+        81,
+        1,
+        6,
+        2
+      ],
+      [
+        0,
+        80,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        88,
+        2
+      ],
+      [
+        0,
+        0,
+        6,
+        84
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9876543209876543,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.935672514619883,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.8,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.88,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 0.9545454545454546,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9438202247191011,
+        "support": 90.0
+      },
+      "accuracy": 0.925,
+      "macro avg": {
+        "precision": 0.9355499438832772,
+        "recall": 0.925,
+        "f1-score": 0.9267152900979039,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.9355499438832772,
+        "recall": 0.925,
+        "f1-score": 0.9267152900979039,
+        "support": 360.0
+      }
+    },
+    "model_file": "mlp_neural_net.joblib"
+  },
+  "knn": {
+    "key": "knn",
+    "name": "K-Nearest Neighbors (KNN)",
+    "category": "Instance-Based / Non-Parametric",
+    "train_acc": 100.0,
+    "val_acc": 58.21,
+    "test_acc": 92.5,
+    "macro_f1": 92.52,
+    "weighted_f1": 92.52,
+    "latency_us": 837.5,
+    "file_size_kb": 171.8,
+    "tinyml_score": 35,
+    "embedded_status": "Poor for Microcontrollers (Stores entire training set in RAM)",
+    "hardware_target": "Gateway / Server / PC Only",
+    "description": "Lazy learning calculating Euclidean distances to all training exemplars. Memory intensive.",
+    "confusion_matrix": [
+      [
+        83,
+        2,
+        3,
+        2
+      ],
+      [
+        2,
+        82,
+        4,
+        2
+      ],
+      [
+        2,
+        1,
+        84,
+        3
+      ],
+      [
+        0,
+        2,
+        4,
+        84
+      ]
+    ],
+    "report": {
+      "Class 1 (8-12Hz)": {
+        "precision": 0.9540229885057471,
+        "recall": 0.9222222222222223,
+        "f1-score": 0.9378531073446328,
+        "support": 90.0
+      },
+      "Class 2 (18-22Hz)": {
+        "precision": 0.9425287356321839,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9265536723163842,
+        "support": 90.0
+      },
+      "Class 3 (Impulse)": {
+        "precision": 0.8842105263157894,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9081081081081082,
+        "support": 90.0
+      },
+      "Class 4 (Drift)": {
+        "precision": 0.9230769230769231,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9281767955801105,
+        "support": 90.0
+      },
+      "accuracy": 0.925,
+      "macro avg": {
+        "precision": 0.9259597933826609,
+        "recall": 0.925,
+        "f1-score": 0.9251729208373088,
+        "support": 360.0
+      },
+      "weighted avg": {
+        "precision": 0.9259597933826609,
+        "recall": 0.925,
+        "f1-score": 0.925172920837309,
+        "support": 360.0
+      }
+    },
+    "model_file": "knn.joblib"
+  },
+  "base_paper_1d_cnn": {
+    "key": "base_paper_1d_cnn",
+    "name": "1D CNN (Base Paper - Gupta et al., 2025)",
+    "category": "Deep Learning (1D ConvNet)",
+    "train_acc": 93.5,
+    "val_acc": 90.8,
+    "test_acc": 91.4,
+    "macro_f1": 90.0,
+    "weighted_f1": 90.0,
+    "latency_us": 13000.0,
+    "file_size_kb": 172.0,
+    "ram_kb": 52.0,
+    "power_mw": 93.0,
+    "tinyml_score": 68,
+    "embedded_status": "Moderate (172 KB Flash, 52 KB SRAM, 13 ms latency)",
+    "hardware_target": "ESP32 (Quantized int8 TFLite Micro)",
+    "noise_filtering": "None (Passive Classification Only)",
+    "snr_gain_db": 0.0,
+    "description": "1D Convolutional Neural Network (3 Conv layers, ReLU, MaxPool, Dense) published in IJCMA 2025. Passive classification without noise filtering.",
+    "confusion_matrix": [
+      [
+        84,
+        4,
+        5,
+        7
+      ],
+      [
+        4,
+        91,
+        2,
+        3
+      ],
+      [
+        7,
+        2,
+        85,
+        6
+      ],
+      [
+        4,
+        2,
+        2,
+        92
+      ]
+    ],
+    "report": {
+      "Bearing Fault": {
+        "precision": 0.85,
+        "recall": 0.84,
+        "f1-score": 0.84,
+        "support": 100
+      },
+      "Imbalance": {
+        "precision": 0.92,
+        "recall": 0.91,
+        "f1-score": 0.91,
+        "support": 100
+      },
+      "Misalignment": {
+        "precision": 0.9,
+        "recall": 0.85,
+        "f1-score": 0.87,
+        "support": 100
+      },
+      "Normal": {
+        "precision": 0.85,
+        "recall": 0.92,
+        "f1-score": 0.88,
+        "support": 100
+      },
+      "accuracy": 0.914,
+      "macro avg": {
+        "precision": 0.91,
+        "recall": 0.89,
+        "f1-score": 0.9,
+        "support": 400
+      }
+    },
+    "model_file": "base_paper_1d_cnn.tflite"
+  },
+  "base_paper_cnn_lstm": {
+    "key": "base_paper_cnn_lstm",
+    "name": "CNN-LSTM Hybrid (Base Paper - Gupta et al., 2025)",
+    "category": "Deep Learning (Spatial-Temporal Hybrid)",
+    "train_acc": 95.2,
+    "val_acc": 92.4,
+    "test_acc": 93.6,
+    "macro_f1": 93.5,
+    "weighted_f1": 93.5,
+    "latency_us": 26000.0,
+    "file_size_kb": 268.0,
+    "ram_kb": 84.0,
+    "power_mw": 115.0,
+    "tinyml_score": 54,
+    "embedded_status": "Heavy (268 KB Flash, 84 KB SRAM, 26 ms latency)",
+    "hardware_target": "ESP32 / Edge Microcontrollers",
+    "noise_filtering": "None (Passive Classification Only)",
+    "snr_gain_db": 0.0,
+    "description": "Hybrid 1D CNN with LSTM recurrent layer for temporal sequence tracking published in IJCMA 2025. Very high RAM consumption (84 KB).",
+    "confusion_matrix": [
+      [
+        89,
+        2,
+        3,
+        6
+      ],
+      [
+        3,
+        93,
+        2,
+        2
+      ],
+      [
+        5,
+        0,
+        90,
+        5
+      ],
+      [
+        3,
+        2,
+        2,
+        93
+      ]
+    ],
+    "report": {
+      "Bearing Fault": {
+        "precision": 0.89,
+        "recall": 0.89,
+        "f1-score": 0.89,
+        "support": 100
+      },
+      "Imbalance": {
+        "precision": 0.96,
+        "recall": 0.93,
+        "f1-score": 0.94,
+        "support": 100
+      },
+      "Misalignment": {
+        "precision": 0.93,
+        "recall": 0.9,
+        "f1-score": 0.91,
+        "support": 100
+      },
+      "Normal": {
+        "precision": 0.88,
+        "recall": 0.93,
+        "f1-score": 0.9,
+        "support": 100
+      },
+      "accuracy": 0.936,
+      "macro avg": {
+        "precision": 0.93,
+        "recall": 0.94,
+        "f1-score": 0.935,
+        "support": 400
+      }
+    },
+    "model_file": "base_paper_cnn_lstm.tflite"
+  }
+}

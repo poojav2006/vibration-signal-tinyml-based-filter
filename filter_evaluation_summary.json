@@ -1,0 +1,55 @@
+{
+  "disturbance_classification_accuracy": 0.8055555555555556,
+  "signal_reconstruction_accuracy": {
+    "overall_before_pct": 73.85894495853962,
+    "overall_after_pct": 85.61421040914738,
+    "overall_gain_pct": 11.755265450607752
+  },
+  "machine_condition_iso_accuracy": {
+    "before_filtering_pct": 75.55555555555556,
+    "after_filtering_pct": 93.05555555555556,
+    "gain_pct": 17.5
+  },
+  "per_class_filtering": [
+    {
+      "class_id": 1,
+      "class_label": "Class 1: 8-12 Hz Tonal",
+      "accuracy_before_pct": 80.67264310434545,
+      "accuracy_after_pct": 87.68114457677672,
+      "accuracy_gain_pct": 7.008501472431258,
+      "snr_gain_db": 5.4776442294631345,
+      "mse_before": 0.04519685033843506,
+      "mse_after": 0.05649667207512486
+    },
+    {
+      "class_id": 2,
+      "class_label": "Class 2: 18-22 Hz Tonal",
+      "accuracy_before_pct": 81.06963534662317,
+      "accuracy_after_pct": 90.11830841857719,
+      "accuracy_gain_pct": 9.048673071954006,
+      "snr_gain_db": 7.549381425865316,
+      "mse_before": 0.0422381950354547,
+      "mse_after": 0.050775987757643075
+    },
+    {
+      "class_id": 3,
+      "class_label": "Class 3: Impulse Noise",
+      "accuracy_before_pct": 72.06619438788209,
+      "accuracy_after_pct": 80.92747437552286,
+      "accuracy_gain_pct": 8.861279987640744,
+      "snr_gain_db": 4.8334078525029645,
+      "mse_before": 0.10385588418327871,
+      "mse_after": 0.08955667596751596
+    },
+    {
+      "class_id": 4,
+      "class_label": "Class 4: Low-Freq Drift",
+      "accuracy_before_pct": 61.627306995307755,
+      "accuracy_after_pct": 83.72991426571275,
+      "accuracy_gain_pct": 22.102607270405006,
+      "snr_gain_db": 9.059596936693511,
+      "mse_before": 0.1764269693041764,
+      "mse_after": 0.09106223174310077
+    }
+  ]
+}
