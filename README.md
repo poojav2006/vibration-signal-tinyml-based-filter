@@ -57,7 +57,3 @@ To run all 14 unit and integration tests:
 py -3.12 -m unittest discover -s tests -p "test_*.py" -v
 ```
 
----
-
-## 4. Master Viva & Defense Guide
-Refer to **`VIVA_DEFENSE_GUIDE.md`** for the complete 2-minute elevator pitch script, the top 15 viva questions & answers, mathematical derivations, and the marking scheme breakdown.
